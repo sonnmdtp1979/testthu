@@ -1,0 +1,70 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+   }
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffe4c4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+}
+
+.form-container {
+    max-width: 400px;
+    width: 100%; /* Thêm thuộc tính này để form có thể định rõ chiều rộng */
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    color: #0000cd;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+button {
+    background-color: #210cde;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+.prediction {
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+p{
+
+    text-align: center;
+}

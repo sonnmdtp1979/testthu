@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wine Quality Prediction</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+<div class="container mt-5">
+    <h2 class="mb-4 text-center">         Wine Quality Prediction</h2> 
+<br>
+    <form method="post" action="/predict" class="form-container">
+        <div class="form-group">
+            <label for="fixed-acidity">Fixed Acidity</label>
+            <input type="text" class="form-control" id="fixed-acidity" name="fixed-acidity" required>
+        </div>
+        <div class="form-group">
+            <label for="volatile-acidity">Volatile Acidity</label>
+            <input type="text" class="form-control" id="volatile-acidity" name="volatile-acidity" required>
+        </div>
+        <div class="form-group">
+            <label for="citric-acid">Citric Acid</label>
+            <input type="text" class="form-control" id="citric-acid" name="citric-acid" required>
+        </div>
+        <div class="form-group">
+            <label for="residual-sugar">Residual Sugar</label>
+            <input type="text" class="form-control" id="residual-sugar" name="residual-sugar" required>
+        </div>
+        <!-- Thêm các trường còn lại tương tự -->
+        <button type="submit" class="btn btn-primary mx-auto d-block">Predict</button>
+<br>
+    </form>
+    {% if prediction_text is not none %}
+    <h4 class="mt-4 text-center">{{ prediction_text }}</h4>
+    {% endif %}
+    {% if error_message %}
+        <p class="text-center text-danger">Error: {{ error_message }}</p>
+    {% endif %}
+</div>
+</body>
+</html>
